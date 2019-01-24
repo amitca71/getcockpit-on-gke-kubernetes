@@ -1,4 +1,4 @@
-# from vm instance where the machine is located on. 
+
 cockpit (https://getcockpit.com/) is great headless CMS (i use it for mobile app content backend)
 The repository demonstrates hoe to deploy one Statefull pod (i use here statefull pod, because 
 this installation uses the sqlite, that is coupled with file system).
