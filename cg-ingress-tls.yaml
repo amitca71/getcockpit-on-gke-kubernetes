@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: amitca71-cockpit
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+spec:
+  tls:                            
+  - hosts:                        
+    - amitca71          
+    secretName: tls-secret 
+  backend:
+  rules:
+  - http:
+      paths:
+      - path: /storage/uploads/*
+        backend:
+          serviceName: cg-cockpit
+          servicePort: 80
+      - path: /api/collections/get/*
+        backend:
+          serviceName: cg-cockpit
+          servicePort: 80
